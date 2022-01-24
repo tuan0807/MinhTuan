@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5069fc64a7.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Todo Design</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-apptitle">
+                <i class="fas fa-check icon"></i>
+                <u style="margin-left:10px;">My Todo-s</u>
+            </div>
+
+            <div class="header-section">
+                <div class="header-section-input">
+                    <input type="text" id="txttext" placeholder="Add new ..">
+                </div>
+                <div class="header-section-calendar">
+                    <label class="cal-text due-date-label">Due date not set</label>
+                    <i class="fa fa-calendar cal1 due-date-button"   data-title="Set a Due date"></i>
+                    <i class="fa fa-calendar-times-o cal2 due-date-button"   data-title="Clear Due date"></i>
+                    <button type="button" class="header-section-button">Add</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-bottom"></div>
+        <div class="option">
+            <div class="option-item" style="padding: 0 16px;">
+                <label class="option-item-text">Filter</label>
+                
+                <select class="option-item-menu">
+                    <option value="all" selected >All</option>
+                    <option value="completed">Completed</option>
+                    <option value="active">Active</option>
+                    <option value="has-due-date">Has due date</option>
+                </select>
+            </div>
+            <div class="option-item" >
+                <label class="option-item-text" >Sort</label>
+                <select class="option-item-menu">
+                    <option value="added-date-asc" selected>Added date</option>
+                    <option value="due-date-desc">Due date</option>
+                </select>
+                <i class="fa fa-sort-amount-asc"   data-title="Ascending"></i>
+                <i class="fa fa-sort-amount-desc" style="display: none;"   data-title="Descending"></i>
+            </div>
+        </div>
+
+        <div class="list">
+            <div class="list-item">
+                <div class="list-item-right">
+                    <h2 class="list-item-right-icon">
+                        <span></span>
+                        <input type="checkbox" id="item1"  checked data-title="Mark as todo">
+                        
+                    </h2>
+                    <div class="list-item-right-title">
+                        <input type="text" class="text"  value="Buy groceries for next week" title="Buy groceries for next week" />
+                        <input type="text" class="text" style="display: none;" value="Buy groceries for next week" />
+                    </div>
+                </div>
+                <div class="list-item-left">
+                    <div class="list-item-left-action">
+                            <i class="fa fa-pencil" style="color:#17a2b8"   data-title="Edit todo"></i>
+                            <i class="fa fa-trash-o btn-danger" style="color:#dc3545"   data-title="Delete todo"></i>
+                    </div>
+                    <div class="list-item-left-info">
+                        <i class="fa fa-info-circle"   data-title="Created date" ></i>
+                        <label class="date">4th Jan 2022</label>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="list-item-right">
+                    <h2 class="list-item-right-icon">
+                        <input type="checkbox" id="item2"  data-title="Mark as complete">
+                        <span></span>
+                    </h2>
+                    <div class="list-item-right-title">
+                        <input type="text" class="text"  value="Renew car insurance" title="Renew car insurance" />
+                        <input type="text" class="text" style="display: none;" value="Renew car insurance" />
+                    </div>
+                </div>
+                <div class="list-item-left">
+                    <div class="list-item-left-action">
+                            <i class="fa fa-pencil" style="color:#17a2b8"   data-title="Edit todo"></i>
+                            <i class="fa fa-trash-o btn-danger" onclick="xoa()" style="color:#dc3545"   data-title="Delete todo"></i>
+                    </div>
+                    <div class="list-item-left-info">
+                        <i class="fa fa-info-circle"   data-title="Created date" ></i>
+                        <label class="date">4th Jan 2022</label>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="list-item-right">
+                    <h2 class="list-item-right-icon">
+                        <input type="checkbox" id="item3"  data-title="Mark as complete"></i>
+                        <span></span>
+                    </h2>
+                    <div class="list-item-right-title">
+                        <input type="text" class="text"  value="Sign up for online course" title="Sign up for online course" />
+                    </div>
+                </div>
+                <div class="list-item-left">
+                    <div class="list-item-left-action">
+                            <i class="fa fa-pencil" style="color:#17a2b8"   data-title="Edit todo"></i>
+                            <i class="fa fa-trash-o btn-danger" onclick="xoa()" style="color:#dc3545"   data-title="Delete todo"></i>
+                    </div>
+                    <div class="list-item-left-info">
+                        <i class="fa fa-info-circle"   data-title="Created date" ></i>
+                        <label class="date">4th Jan 2022</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

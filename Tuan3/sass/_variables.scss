@@ -1,0 +1,16 @@
+$primary: #007bff;
+$secondary: #6c757d;
+$text-info: #17a2b8;
+$text-danger: #dc3545;
+$text-black: rgba(0,0,0,.5);
+$rounded: 4px;
+// @mixin btn-primary ( $color:#fff, $bgc:#007bff) {
+//     color: $color;
+//     background-color: $bgc;
+// }
+@mixin btn ($pd:6px 12px, $fw:400, $cs:pointer) {
+    padding: $pd;
+    font-weight: $fw;
+    cursor: $cs;
+}
+

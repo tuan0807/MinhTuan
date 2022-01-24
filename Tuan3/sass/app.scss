@@ -1,0 +1,17 @@
+@import "./variables";
+@import "./header";
+@import "./list";
+@import "./option";
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5;
+    margin: 60px;
+}
+.container {
+    margin: 48px auto;
+    padding: 8px;
+    border-radius: $rounded;
+    background-color:#f8f9fa;
+    box-shadow:0 8px 16px rgba(0,0,0,.15);
+    max-width: 1140px;
+}

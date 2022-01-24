@@ -1,0 +1,99 @@
+.header-apptitle {
+    margin: 4px auto;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    text-align: center !important;
+    font-size: 40px;
+    color: $primary;
+    .icon {
+        background-color: $primary;
+        color: white;
+        border-radius: $rounded;
+        padding: 8px;
+    }
+}
+.header-section {
+    margin: 20px 60px ;
+    width: auto;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: $rounded;
+    box-shadow:0 2px 4px rgba(0,0,0,.075);
+    input{
+        border: 0;
+        background-color: transparent;
+        width:100%;
+        padding: 6px 12px;
+        font-size:24px;
+        line-height:1.5;
+        outline: none;
+    }
+    &-calendar {
+        display: flex;
+        align-items: center;
+        padding: 0 8px;
+        .cal-text {
+            color: $secondary;
+            margin: 8px 0;
+            padding: 0 4px;
+            display: none;
+        }
+        .cal1 {
+            margin: 8px 0;
+            color: $primary;
+            @include btn();
+            font-size: 18px;
+            position: relative;
+        }
+        .cal2 {
+            margin: 8px 0;
+            color: $text-danger;
+            @include btn();
+            font-size: 18px;
+            display: none;
+            position: relative;
+        }
+        i[data-title]:hover:after{
+            content: attr(data-title);
+            padding: 4px 8px;
+            color: white;
+            background-color: black;
+            position: absolute;
+            left: -90%;
+            top: 130%;    
+            z-index: 20;
+            white-space: nowrap;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 400;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.5;
+        }
+    }
+    &-button {
+        margin-right: 8px;
+        padding: 6px 12px;
+        cursor: pointer;
+        color:#fff;
+        background-color:$primary;
+        border-color:$primary;
+        border:1px solid transparent;
+        border-radius: $rounded;
+        font-size: 22px;
+    }
+    &-button:hover {
+            color:#fff;
+            background-color:#0069d9;
+            border-color:#0062cc
+    }
+}
+
+.border-bottom {
+    padding: 8px;
+    margin: 0 24px;
+    border-bottom:1px solid #dee2e6;
+}
