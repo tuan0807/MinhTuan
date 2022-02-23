@@ -1,0 +1,122 @@
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .image{
+        flex: 1 1 42rem;
+
+        img{
+            width: 100%;
+        }
+    }
+    .content{
+        flex: 1 1 42rem;
+        padding: 3rem;
+        background: white;
+
+        h3{
+            font-size: 3rem;
+            text-transform: uppercase;
+            color: black;
+        }
+
+        p{
+            font-size: 1.5rem;
+            color: $light-color;
+            padding: 1rem 0;
+            line-height: 2;
+        }
+    }
+}
+
+.faq{
+    .accordion-container{
+        max-width: 70rem;
+        margin: 0 auto;
+
+        .accordion{
+            background: white;
+            margin-bottom: 1.5rem;
+            box-shadow: $box-shadow;
+
+            &:last-child{
+                margin-bottom: .5rem;
+            }
+
+            &.active{
+                .accordion-heading{
+                    background: red;
+
+                    i{
+                        transform: rotate(180deg);
+                    }
+                }
+                .accordion-content{
+                    display: block;
+                }
+            }
+            &-heading{
+                padding: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+                background: black;
+                cursor: pointer;
+                
+
+                h3{
+                    font-size: 1.7rem;
+                    color: white;
+                }
+                i{
+                    font-size: 2rem;
+                    color: white;
+                }
+            }
+
+            &-content{
+                padding: 2rem;
+                font-size: 1.5rem;
+                line-height: 2;
+                color: $light-color;
+                display: none;
+                animation: fadeIn .2s linear;
+            }
+        }
+    }
+}
+
+.review{
+    .slide{
+        width: 35rem;
+        padding: 2rem;
+        text-align: center;
+        border:$border;
+        box-shadow: $box-shadow;
+
+        img{
+            height: 10rem;
+            width: 10rem;
+            border-radius: 50%;
+            margin-bottom: 0.5rem;
+        }
+        h3{
+            font-size: 2rem;
+            padding: .5rem 0;
+            color: black;
+        }
+        span{
+            color: $blue;
+            font-size: 1.7rem;
+        }
+        p{
+            font-size: 1.5rem;
+            line-height: 2;
+            color: $light-color;
+            padding-top: 1rem;
+        }
+    }
+}
